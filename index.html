@@ -6,6 +6,14 @@
     <title>DripStore</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- HEADER, NAV E CARROSSEL (NATAN) -->
@@ -25,9 +33,9 @@
       <div class="px-[200px] py-[44px]">
         <div class="flex flex-col md:flex-row gap-8 items-center">
           <img
-            src="laye.png"
+            src="Assets/laye.png"
             alt="tenis-air-jordan"
-            class="w-[22rem] h-auto bg-red-500"
+            class="w-[22rem] h-auto px-8"
           />
 
           <section
@@ -55,7 +63,7 @@
               </div>
 
               <button
-                class="mt-6 bg-[#C92071] text-white px-7 py-0.5 rounded-lg hover:bg-gray-500 transition"
+                class="mt-6 bg-[#C92071] text-white px-7 py-0.5 rounded-lg hover:bg-gray-500 transition cursor-pointer"
               >
                 Ver Oferta
               </button>
@@ -64,7 +72,152 @@
         </div>
       </div>
     </section>
+    <!-- COR DO FOOTER E AJUSTE LARGURA -->
+    <div class="bg-[#1F1F1F] text-white py-14 px-50 mx-auto">
+      <!-- Container Menu do Footer -->
+      <div
+        class="flex flex-col md:flex-row gap-20 bg-green-900 px-4 py-1 justify-center"
+      >
+        <div>
+          <p class="gap-8 px-3 py-1 text-xl font-bold mb-4">Digital Store</p>
 
-    <footer class="bg-red-400">Aqui está o meu footer</footer>
+          <h3 class="text-white text-[0.9rem] font-light mb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <span class="block"
+              >Recusandae, cum quasi numquam ullam hic maiores.</span
+            >
+            <span class="block"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing.</span
+            >
+            <!-- Redes Sociais -->
+            <div class="mt-4 text-black hover:text-white transition-colors">
+              <a
+                href="#"
+                class="px-1 text-2xl text-gray-600 hover:text-blue-600 transition-colors duration-200"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="px-1 text-2xl text-gray-600 hover:text-pink-600 transition-colors duration-200"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="px-1 text-2xl text-gray-600 hover:text-blue-400 transition-colors duration-200"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </h3>
+        </div>
+        <!-- Colunas Informações, Categoria e Contato -->
+        <div>
+          <h2 class="text-lg font-semibold mb-4">Informações</h2>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition font-light"
+                >Sobre Drip Store</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition font-light"
+                >Segurança</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition font-light"
+                >Wishlist</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition font-light"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition font-light"
+                >Trabalhe Conosco</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition font-light"
+                >Meus Pedidos</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Coluna Categorias -->
+        <div>
+          <h2 class="text-lg font-semibold mb-4">Categorias</h2>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition font-light"
+                >Camisetas</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition font-light"
+                >Calças</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition font-light"
+                >Bonés</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition font-light"
+                >Headphones</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition font-light"
+                >Tênis</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Coluna Contato -->
+        <div>
+          <h2 class="text-lg font-semibold mb-4">Contato</h2>
+          <address class="not-italic text-gray-400">
+            <p class="mb-2">Av. Santos Dumont, 1510 - 1° andar</p>
+            <p class="mb-2">Aldeota, Fortaleza - CE, 60150-161</p>
+            <p>(85) 3051-3411</p>
+          </address>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div
+        class="font-light border-t border-gray-800 mt-26 pt-2 text-center text-gray-400"
+      >
+        <p>© 2025 Digital College - Devs. Fernando, Natan, Nilton e Lucas</p>
+      </div>
+    </div>
   </body>
 </html>
