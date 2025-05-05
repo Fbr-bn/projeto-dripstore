@@ -16,9 +16,95 @@
     />
   </head>
   <body>
-    <!-- HEADER, NAV E CARROSSEL (NATAN) -->
+   <!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DripStore</title>
 
-    <!-- FINAL DO HEADER (NATAN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class=" absolute  p-6 relative md:h-[160px]">  
+      <div class="flex items-center">  
+        <button id="menu-button" class="mr-4 md:hidden cursor-pointer ">  
+          <span class="block w-6 h-1 bg-black mb-1"></span>  
+          <span class="block w-6 h-1 bg-black mb-1"></span>  
+          <span class="block w-6 h-1 bg-black"></span>  
+        </button>  
+        <nav id="menu" class="hidden md:flex md:flex-row md:mt-30 md:top-[px] md:left-[60px] absolute top-0  mt-12 mr-4">  
+          <ul class="flex flex-col items-start gap-2 md:flex-row">  
+              <li><a href="#" class="text-gray-800 hover:text-blue-500">Início</a></li>  
+              <li><a href="#" class="text-gray-800 hover:text-blue-500">Especialidades</a></li>  
+              <li><a href="#" class="text-gray-800 hover:text-blue-500">Quem Somos</a></li>  
+              <li><a href="#" class="text-gray-800 hover:text-blue-500">Depoimentos</a></li>  
+          </ul>  
+      </nav>  
+    
+          
+        <div class="flex items-center justify-center flex-1 space-x-4">  
+            <img src="Assets/logo-header.svg" alt="" class=" md:absolute md:top-[42px] md:left-[60px] md:w-[253px] md:h-[44px]">                    
+          <div class=" absolute right-2 flex space-x-4 items-center md:top-[42px]  md:left-[350px] xl:left-[690px]">
+            <div class="  p-4 flex flex-row gap-4  w-ful md:w-[350px] md:h-[50px] md:bg-gray-50 md:rounded-[5px] ">
+              <input
+              class=" text-[1.2rem] focus:outline-none hidden md:block "
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Pesquisar produtos..."
+              />
+              <label for="name" class="" >
+                <i class=" fas fa-magnifying-glass hidden md:flex md:ml-15  opacity-50 hover:text-[#C92071] cursor-pointer " ></i>
+              </label>
+            </div>
+            <a href="#" class="hidden md:block">Cadastre-se</a>
+            <button class="hidden md:block bg-[#C92071] text-white w-[114px] h-[40] rounded-[5px] cursor-pointer">Entrar</button>
+           
+            <i class="fas fa-cart-shopping text-[#C92071] cursor-pointer" ></i>
+          </div> 
+        </div>  
+      </div>  
+    </header>  
+    <section>
+      <div class="flex flex-col-reverse justify-center items-center bg-gray-100 gap-4 md:flex md:flex-row md:w-[1440] md:h-[1440] ">
+        <div class="  flex flex-col justify-center items-center gap-3">
+          
+            <p class="text-[#C92071]">Melhores ofertas personalizadas</p>
+            <h2 class="font-semibold text-4xl"> Queima de <br> stoque Nike  </h2>
+            <p class="flex  text-center p-2 ">Consequat culpa exercitation mollit nisi <br>
+              excepteur do do tempor laboris eiusmod irure <br> consectetur</p>
+            
+              <div>
+                <button class="mb-15 text-white bg-[#C92071] bordeR-[#C92071]
+                 cursor-pointer w-[330px] h-[48px]
+                  uppercase rounded-[8px] md:w-[220px]">Ver ofertas
+                </button>
+              </div>
+          
+        
+
+
+
+
+        </div>
+        <div class="flex justify-between items-center">
+          <img src="Assets/tenis-carrossel.png" alt="Tênis Nike" class=" w-80 rotate-340 md:w-[500px] ">
+          <div>
+            <img src="Assets/Ornament 11.png" alt="" class=" absolute top-30 md:right-5 md:top-55 w-30 z-0 " >
+          </div>         
+        </div>
+
+      </div>
+    </section>
 
     <!-- PARTE DO LUCAS - SECTION (COLEÇÃO EM DESTAQUE) -->
 
