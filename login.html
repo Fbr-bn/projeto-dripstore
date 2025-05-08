@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body class="bg-sky-500  flex flex-col items-center justify-center">
+    <header class="bg-white w-full flex justify-center items-cente p-5 xl:p-10 xl:flex xl:justify-start xl:h-[]">
+        <div class="flex items-center justify-center flex-1 space-x-4">
+            <img src="Assets/logo-header.svg" alt="" class="w-50 xl:absolute xl:top-[px] xl:left-[70px] xl:w-[253px] xl:h-[44px]">
+        </div>
+    </header>
+    <section class="flex items-center justify-center ">
+        <div class="bg-white flex flex-col  w-[315px]
+                    h-[450px] top-[171px] left-[30px] p-[30px] 
+                    rounded-lg shadow-xl mt-15 gap-5 md:w-[450px] md:h-[450px]">
+            <div>
+                <h2 class="text-2xl flex justify-center items-center">Acessar sua conta </h2>
+                <h3 class="text-center mb-4">
+                    Novo cliente? registre-se <a href="#" class=" underline cursor-pointer hover:text-[#C92071]"> aqui</a>
+                  </h3>
+            </div>
+        
+            <div>
+                <p>Login </p>
+                <input type="text" name="email" id="email"
+                placeholder="Insira seu login ou email" class="bg-gray-50 p-2 w-full rounded">
+                <p>Senha</p>
+                <input type="password" name="password" id="password"
+                 placeholder="Insira sua senha" class="bg-gray-50 p-2 w-full rounded">
+            </div>
+            <a href="#" class="cursor-pointer underline hover:hover:text-[#C92071]">Esqueci minha senha </a>
+            <div>
+                <button type="submit" class="text-white bg-[#C92071] bordeR-[#C92071]
+                cursor-pointer w-full h-[40px] rounded-lg">Acessar conta</button>
+            </div>
+            <h3 class="flex justify-center items-center">Ou faça login</h3>
+            <div class="flex justify-center items-center gap-4 h-[0px] ">
+                <img src="projeto-dripstore/Assets/gmail 1.png" alt="" class="cursor-pointer">
+                <img src="projeto-dripstore/Assets/facebook.login.png" alt="" class="cursor-pointer">
+            </div>
+        </div>
+        <div class="md:flex md:flex-row hidden md:block hidden ">
+            <div>
+                <img src="Assets/tenis-login-1.png" alt="" class="w-60 xl:w-90 mb-4 xl:w-[350px] xl:ml-30">
+            </div>
+            <div>
+                <img src="Assets/tenis-login-2.png" alt="" class="w-60 xl:w-[420px] transform translate-y-30 xl:translate-y-50 xl:-ml-[90px]">
+            </div>
+        </div>
+    </section>
+    
+    
+</body>
+</html>
