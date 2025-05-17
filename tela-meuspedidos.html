@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meus Pedidos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header
+      class="drop-shadow-md blur-none bg-[#FFFFFF] p-4 md:p-6 md:h-[160px]"
+    >
+      <div class="container mx-auto">
+        <div class="flex items-center justify-between">
+          <!-- Menu Mobile -->
+          <button id="menu-button" class="md:hidden mr-4">
+            <span class="block h-1 w-6 bg-black mb-1"></span>
+            <span class="block h-1 w-6 bg-black mb-1"></span>
+            <span class="block h-1 w-6 bg-black"></span>
+          </button>
+
+          <!-- Logo + Barra de pesquisa (desktop) -->
+          <div class="flex items-center">
+            <img
+              src="Assets/logo-header.svg"
+              alt="Logo"
+              class="h-10 md:h-11 w-auto"
+            />
+
+            <!-- Barra de pesquisa (desktop) -->
+            <div
+              class="hidden md:flex items-center bg-gray-50 rounded h-[50px] w-[450px] px-5 ml-9"
+            >
+              <input
+                class="w-full bg-transparent px-4 text-sm focus:outline-none"
+                type="text"
+                placeholder="Tênis"
+              />
+              <i
+                class="fas fa-magnifying-glass text-gray-400 hover:text-[#C92071] cursor-pointer"
+              ></i>
+            </div>
+          </div>
+
+          <!-- Ícones direita (lupa mobile e carrinho) -->
+          <div class="flex items-center space-x-4">
+            <!-- Lupa (mobile) -->
+            <button class="md:hidden text-xl">
+              <i
+                class="fas fa-magnifying-glass text-gray-700 hover:text-[#C92071]"
+              ></i>
+            </button>
+
+            <!-- Carrinho -->
+            <i
+              class="fas fa-shopping-cart text-xl cursor-pointer hover:text-[#C92071]"
+            ></i>
+          </div>
+        </div>
+
+        <nav id="menu" class="hidden md:flex mt-4 md:mt-8">
+          <ul class="flex space-x-6">
+            <li>
+              <a
+                href="#"
+                class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
+                >Produtos</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
+                >Categorias</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
+                >Meus Pedidos</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row gap-8">
+        <!-- Menu Lateral (oculto em mobile) -->
+        <div
+          class="hidden md:block bg-white rounded-lg shadow-sm p-6 md:w-1/4 h-fit shadow-sm blur-none"
+        >
+          <ul class="space-y-4">
+            <li class="border-b border-gray-200 pb-2 font-medium text-gray-600">
+              Meu Perfil
+            </li>
+            <li
+              class="border-b border-gray-200 pb-2 text-gray-600 hover:text-[#C92071] cursor-pointer"
+            >
+              Meus Pedidos
+            </li>
+            <li
+              class="border-b border-gray-200 pb-2 text-gray-600 hover:text-[#C92071] cursor-pointer"
+            >
+              Minhas Informações
+            </li>
+            <li class="text-gray-600 hover:text-[#C92071] cursor-pointer">
+              Métodos de Pagamento
+            </li>
+          </ul>
+        </div>
+
+        <!-- Seção de Pedidos -->
+        <div class="w-full md:w-3/4">
+          <div class="bg-white rounded-lg shadow-sm p-6">
+            <div
+              class="mb-6 flex items-center justify-between border-b border-gray-200 pb-2"
+            >
+              <h2 class="text-lg font-semibold text-[#474747]">Meus Pedidos</h2>
+              <div class="text-xs font-semibold text-[#474747] hidden md:block">
+                STATUS
+              </div>
+            </div>
+
+            <!-- Lista de Pedidos -->
+            <div class="space-y-4">
+              <!-- Pedido 1 -->
+              <div class="border-b border-gray-200 pb-4">
+                <div
+                  class="flex flex-col md:flex-row md:items-center md:justify-between"
+                >
+                  <div class="flex items-center">
+                    <img
+                      src="Assets/White-Sneakers-PNG-Clipart.png"
+                      alt="sneakers-branco"
+                      class="w-16 h-16 rounded bg-green-100 p-1 mr-3"
+                    />
+                    <div>
+                      <p class="text-sm text-[#8F8F8F]">Pedido nº 232591932</p>
+                      <p class="font-bold text-[#1F1F1F] cursor-pointer">
+                        Tênis Nike Revolution 6 Next Nature Masculino
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mt-2 md:mt-0 md:self-center">
+                    <span
+                      class="rounded bg-yellow-100 px-2 py-1 text-xs text-yellow-800"
+                      >Em trânsito</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pedido 2 -->
+              <div class="border-b border-gray-200 pb-4">
+                <div
+                  class="flex flex-col md:flex-row md:items-center md:justify-between"
+                >
+                  <div class="flex items-center">
+                    <img
+                      src="Assets/White-Sneakers-PNG-Clipart.png"
+                      alt="sneakers-branco"
+                      class="w-16 h-16 rounded bg-green-100 p-1 mr-3"
+                    />
+                    <div>
+                      <p class="text-sm text-[#8F8F8F]">Pedido nº 232591932</p>
+                      <p class="font-bold text-[#1F1F1F] cursor-pointer">
+                        Tênis Nike Revolution 6 Next Nature Masculino
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mt-2 md:mt-0 md:self-center">
+                    <span
+                      class="rounded bg-green-100 px-2 py-1 text-xs text-green-800"
+                      >Finalizado</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pedido 3 -->
+              <div class="border-b border-gray-200 pb-4">
+                <div
+                  class="flex flex-col md:flex-row md:items-center md:justify-between"
+                >
+                  <div class="flex items-center">
+                    <img
+                      src="Assets/White-Sneakers-PNG-Clipart.png"
+                      alt="sneakers-branco"
+                      class="w-16 h-16 rounded bg-green-100 p-1 mr-3"
+                    />
+                    <div>
+                      <p class="text-sm text-[#8F8F8F]">Pedido nº 232591932</p>
+                      <p class="font-bold text-[#1F1F1F] cursor-pointer">
+                        Tênis Nike Revolution 6 Next Nature Masculino
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mt-2 md:mt-0 md:self-center">
+                    <span
+                      class="rounded bg-red-100 px-2 py-1 text-xs text-red-800"
+                      >Cancelado</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pedido 4 -->
+              <div class="border-b border-gray-200 pb-4">
+                <div
+                  class="flex flex-col md:flex-row md:items-center md:justify-between"
+                >
+                  <div class="flex items-center">
+                    <img
+                      src="Assets/White-Sneakers-PNG-Clipart.png"
+                      alt="sneakers-branco"
+                      class="w-16 h-16 rounded bg-green-100 p-1 mr-3"
+                    />
+                    <div>
+                      <p class="text-sm text-[#8F8F8F]">Pedido nº 232591932</p>
+                      <p class="font-bold text-[#1F1F1F] cursor-pointer">
+                        Tênis Nike Revolution 6 Next Nature Masculino
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mt-2 md:mt-0 md:self-center">
+                    <span
+                      class="rounded bg-green-100 px-2 py-1 text-xs text-green-800"
+                      >Finalizado</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pedido 5 -->
+              <div class="border-b border-gray-200 pb-4">
+                <div
+                  class="flex flex-col md:flex-row md:items-center md:justify-between"
+                >
+                  <div class="flex items-center">
+                    <img
+                      src="Assets/White-Sneakers-PNG-Clipart.png"
+                      alt="sneakers-branco"
+                      class="w-16 h-16 rounded bg-green-100 p-1 mr-3"
+                    />
+                    <div>
+                      <p class="text-sm text-[#8F8F8F]">Pedido nº 232591932</p>
+                      <p class="font-bold text-[#1F1F1F] cursor-pointer">
+                        Tênis Nike Revolution 6 Next Nature Masculino
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mt-2 md:mt-0 md:self-center">
+                    <span
+                      class="rounded bg-green-100 px-2 py-1 text-xs text-green-800"
+                      >Finalizado</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer (versão original) -->
+    <div class="mx-auto mt-14 w-full bg-[#1F1F1F] py-10 text-white">
+      <!-- Container Menu do Footer -->
+      <div
+        class="mx-auto flex max-w-screen-2xl flex-col justify-center gap-8 px-4 py-1 md:flex-row md:gap-20 md:px-8 lg:px-28"
+      >
+        <div class="mr-8">
+          <img
+            class="w-[11rem] text-xl"
+            src="Assets/logo-footer.svg"
+            alt="logotipo-footer"
+          />
+          <p class="mb-4 gap-8 px-3 py-1 text-xl font-bold"></p>
+
+          <h3 class="mb-4 text-[0.9rem] font-light text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <span class="block"
+              >Recusandae, cum quasi numquam ullam hic maiores.</span
+            >
+            <span class="block"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing.</span
+            >
+            <!-- Redes Sociais -->
+            <div class="mt-4 text-black transition-colors hover:text-white">
+              <a
+                href="#"
+                class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-600"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-pink-600"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-400"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </h3>
+        </div>
+        <!-- Container Flex (Informações e Categorias) -->
+        <div class="flex flex-row flex-wrap">
+          <!-- Colunas Informações, Categoria e Contato -->
+          <div class="w-1/2 space-y-4">
+            <h2 class="mb-4 flex flex-wrap text-lg font-semibold">
+              Informações
+            </h2>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Sobre Drip Store</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Segurança</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Wishlist</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Trabalhe Conosco</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Meus Pedidos</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Coluna Categorias -->
+          <div class="w-1/2">
+            <h2 class="mb-4 px-6 text-lg font-semibold">Categorias</h2>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Camisetas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Calças</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Bonés</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Headphones</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Tênis</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Coluna Contato -->
+        <div>
+          <h2 class="mb-4 text-lg font-semibold">Contato</h2>
+          <address class="not-italic text-gray-400">
+            <p class="mb-4">
+              Av. Humberto Monte, 2929 - 11° andar, Torre Norte - Salas 1101 à
+              1107
+            </p>
+            <p class="mb-4">Pici, Fortaleza - CE, 60440-593</p>
+            <p>(85) 99972-1749</p>
+          </address>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div
+        class="mt-5 border-t border-gray-800 px-4 pt-4 pb-4 text-center font-light text-gray-400"
+      >
+        <p class="text-sm sm:text-base">
+          © 2025 Digital College -<br class="sm:hidden" />
+          Devs. Fernando, Natan, Nilton e Lucas
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
