@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DripStore</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="drop-shadow-md blur-none bg-[#FFFFFF] p-4 md:p-6">
+      <div class="container mx-auto">
+        <!-- Linha superior - Logo e elementos à direita -->
+        <div class="flex items-center justify-between">
+          <!-- Logo à esquerda -->
+          <div>
+            <img
+              src="Assets/logo-header.svg"
+              alt="DripStore Logo"
+              class="h-10 md:h-10 w-auto"
+            />
+          </div>
+
+          <!-- Barra de pesquisa (central) -->
+          <div
+            class="hidden md:flex items-center bg-gray-50 rounded h-[50px] w-[600px] px-4 mx-8"
+          >
+            <input
+              class="w-full bg-transparent px-4 text-sm focus:outline-none"
+              type="text"
+              placeholder="Pesquisar produto..."
+            />
+            <i
+              class="fas fa-magnifying-glass text-gray-400 hover:text-[#C92071] cursor-pointer"
+            ></i>
+          </div>
+
+            <!-- Botões desktop -->
+            <div class="hidden md:flex items-center space-x-5">
+              <a
+                href="#"
+                class="text-[#474747] hover:text-[#474747] whitespace-nowrap hover:underline"
+                >Cadastre-se</a
+              >
+              <button
+                class="bg-[#C92071] text-white px-6 py-2 md:rounded-lg cursor-pointer"
+              >
+                Entrar
+              </button>
+            </div>
+
+            <!-- Carrinho -->
+            <i
+              class="fas fa-cart-shopping text-[#C92071] cursor-pointer text-xl"
+            ></i>
+
+            <!-- Lupa (mobile) -->
+            <button class="md:hidden text-xl">
+              <i
+                class="fas fa-magnifying-glass text-gray-700 hover:text-[#C92071]"
+              ></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Linha inferior - Menu de navegação -->
+        <div class="flex items-center mt-4 md:mt-6">
+          <!-- Menu Mobile -->
+          <button id="menu-button" class="md:hidden mr-4 cursor-pointer">
+            <span class="block w-6 h-1 bg-black mb-1"></span>
+            <span class="block w-6 h-1 bg-black mb-1"></span>
+            <span class="block w-6 h-1 bg-black"></span>
+          </button>
+
+          <!-- Menu de navegação desktop (à esquerda) -->
+          <nav id="menu" class="hidden md:block">
+            <ul class="flex space-x-8">
+              <li>
+                <a
+                  href="#"
+                  class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
+                  >Produtos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
+                  >Categorias</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
+                  >Meus Pedidos</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Seção de ofertas -->
+    <section>
+      <div
+        class="flex flex-col-reverse justify-center items-center bg-gray-100 gap-4 md:flex md:flex-row md:w-[1440] md:h-[1440]"
+      >
+        <div class="flex flex-col justify-center items-center gap-3">
+          <p class="text-[#C92071]">Melhores ofertas personalizadas</p>
+          <h2 class="font-semibold text-4xl">
+            Queima de <br />
+            stoque Nike
+          </h2>
+          <p class="flex text-center p-2">
+            Consequat culpa exercitation mollit nisi <br />
+            excepteur do do tempor laboris eiusmod irure <br />
+            consectetur
+          </p>
+
+          <div>
+            <button
+              class="mb-15 text-white bg-[#C92071] bordeR-[#C92071] cursor-pointer w-[330px] h-[48px] uppercase rounded-[8px] md:w-[220px]"
+            >
+              Ver ofertas
+            </button>
+          </div>
+        </div>
+        <div class="flex justify-between items-center">
+          <img
+            src="Assets/tenis-carrossel.png"
+            alt="Tênis Nike"
+            class="w-80 rotate-340 md:w-[500px]"
+          />
+          <div>
+            <img
+              src="Assets/Ornament 11.png"
+              alt=""
+              class="absolute top-30 md:right-5 md:top-55 w-30 z-0"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTE DO LUCAS - SECTION (COLEÇÃO EM DESTAQUE) -->
+
+    <!-- FINAL DA PARTE DO LUCAS -->
+
+    <!-- PARTE DO NILTON (CARDS DOS TÊNIS) -->
+    <div>
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-semibold text-gray-800">Produtos em alta</h2>
+        <a href="#" class="text-sm text-pink-500 hover:underline"
+          >Ver todos →</a
+        >
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        <!-- Produto 1 -->
+
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <div class="relative">
+            <span
+              class="absolute top-2 left-2 bg-lime-200 text-lime-700 text-xs font-bold px-2 py-1 rounded-full"
+              >30% OFF</span
+            >
+            <img
+              src="assets/Layer 1aa 2.png"
+              alt="Tênis K-Swiss V8"
+              class="w-full h-auto object-contain"
+            />
+          </div>
+          <div class="mt-4 text-sm text-gray-500">Tênis</div>
+          <div class="text-base font-medium text-gray-800">
+            K-Swiss V8 - Masculino
+          </div>
+          <div class="text-sm mt-1">
+            <span class="line-through text-gray-400 mr-2">$200</span>
+            <span class="font-bold text-gray-900">$100</span>
+          </div>
+        </div>
+
+        <!-- Produto 2 (também com selo) -->
+
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <div class="relative">
+            <span
+              class="absolute top-2 left-2 bg-lime-200 text-lime-700 text-xs font-bold px-2 py-1 rounded-full"
+              >30% OFF</span
+            >
+            <img
+              src="assets/Layer 1aa 2.png"
+              alt="Tênis K-Swiss V8"
+              class="w-full h-auto object-contain"
+            />
+          </div>
+          <div class="mt-4 text-sm text-gray-500">Tênis</div>
+          <div class="text-base font-medium text-gray-800">
+            K-Swiss V8 - Masculino
+          </div>
+          <div class="text-sm mt-1">
+            <span class="line-through text-gray-400 mr-2">$200</span>
+            <span class="font-bold text-gray-900">$100</span>
+          </div>
+        </div>
+
+        <!-- Produtos 3 a 8 (sem selo) -->
+
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <img
+            src="assets/Layer 1aa 2.png"
+            alt="Tênis K-Swiss V8"
+            class="w-full h-auto object-contain"
+          />
+          <div class="mt-4 text-sm text-gray-500">Tênis</div>
+          <div class="text-base font-medium text-gray-800">
+            K-Swiss V8 - Masculino
+          </div>
+          <div class="text-sm mt-1">
+            <span class="line-through text-gray-400 mr-2">$200</span>
+            <span class="font-bold text-gray-900">$100</span>
+          </div>
+        </div>
+
+        <!-- Produto 4 -->
+
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <img
+            src="assets/Layer 1aa 2.png"
+            alt="Tênis K-Swiss V8"
+            class="w-full h-auto object-contain"
+          />
+          <div class="mt-4 text-sm text-gray-500">Tênis</div>
+          <div class="text-base font-medium text-gray-800">
+            K-Swiss V8 - Masculino
+          </div>
+          <div class="text-sm mt-1">
+            <span class="line-through text-gray-400 mr-2">$200</span>
+            <span class="font-bold text-gray-900">$100</span>
+          </div>
+        </div>
+
+        <!-- Produto 5 -->
+
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <img
+            src="assets/Layer 1aa 2.png"
+            alt="Tênis K-Swiss V8"
+            class="w-full h-auto object-contain"
+          />
+          <div class="mt-4 text-sm text-gray-500">Tênis</div>
+          <div class="text-base font-medium text-gray-800">
+            K-Swiss V8 - Masculino
+          </div>
+          <div class="text-sm mt-1">
+            <span class="line-through text-gray-400 mr-2">$200</span>
+            <span class="font-bold text-gray-900">$100</span>
+          </div>
+        </div>
+
+        <!-- Produto 6 -->
+
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <img
+            src="assets/Layer 1aa 2.png"
+            alt="Tênis K-Swiss V8"
+            class="w-full h-auto object-contain"
+          />
+          <div class="mt-4 text-sm text-gray-500">Tênis</div>
+          <div class="text-base font-medium text-gray-800">
+            K-Swiss V8 - Masculino
+          </div>
+          <div class="text-sm mt-1">
+            <span class="line-through text-gray-400 mr-2">$200</span>
+            <span class="font-bold text-gray-900">$100</span>
+          </div>
+        </div>
+
+        <!-- Produto 7 -->
+
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <img
+            src="assets/Layer 1aa 2.png"
+            alt="Tênis K-Swiss V8"
+            class="w-full h-auto object-contain"
+          />
+          <div class="mt-4 text-sm text-gray-500">Tênis</div>
+          <div class="text-base font-medium text-gray-800">
+            K-Swiss V8 - Masculino
+          </div>
+          <div class="text-sm mt-1">
+            <span class="line-through text-gray-400 mr-2">$200</span>
+            <span class="font-bold text-gray-900">$100</span>
+          </div>
+        </div>
+
+        <!-- Produto 8 -->
+
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <img
+            src="assets/Layer 1aa 2.png"
+            alt="Tênis K-Swiss V8"
+            class="w-full h-auto object-contain"
+          />
+          <div class="mt-4 text-sm text-gray-500">Tênis</div>
+          <div class="text-base font-medium text-gray-800">
+            K-Swiss V8 - Masculino
+          </div>
+          <div class="text-sm mt-1">
+            <span class="line-through text-gray-400 mr-2">$200</span>
+            <span class="font-bold text-gray-900">$100</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FINAL DA PARTE DO NILTON -->
+
+    <!-- INÍCIO SECTION E FOOTER (FERNANDO)-->
+    <section class="bg-white flex justify-center">
+      <div class="px-[150px] py-[45px]">
+        <div class="flex flex-col md:flex-row gap-10 items-center">
+          <!-- Container da imagem com posição relativa -->
+          <div class="relative w-64 h-64">
+            <!-- Círculo cinza (background da imagem) -->
+            <div
+              class="absolute inset-0 rounded-full bg-[linear-gradient(to_bottom,rgba(66,0,255,0.2),rgba(255,255,255,0.2))]"
+            ></div>
+
+            <!-- Imagem do Tênis -->
+            <img
+              src="Assets/laye.png"
+              alt="tenis-air-jordan"
+              class="w-[22rem] py-7 h-64 relative"
+            />
+          </div>
+
+          <!-- Conteúdo -->
+          <section
+            class="bg-gray-400 flex flex-row gap-6 p-8 rounded-lg py-0 px-5"
+          ></section>
+          <!-- Conteúdo -->
+          <div class="bg-red-600 mb-2 pt-2 -mt-7">
+            <span class="text-md font-semibold text-[#C92071]">
+              Oferta especial
+            </span>
+            <h2 class="text-4xl font-bold text-[#474747] mt-3">
+              Air Jordan edição <span class="block">de colecionador</span>
+            </h2>
+            <div
+              class="font-light text-gray-700 text-[#474747] mt-6 md:text-balance"
+            >
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              </p>
+              <p>
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim
+              </p>
+              <p>
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                ut
+              </p>
+              <p>aliquip</p>
+            </div>
+
+            <button
+              class="mt-6 bg-[#C92071] text-white px-7 py-0.5 rounded-lg hover:bg-gray-500 transition cursor-pointer"
+            >
+              Ver Oferta
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <div class="mx-auto mt-14 w-full bg-[#1F1F1F] py-10 text-white">
+      <!-- Container Menu do Footer -->
+      <div
+        class="mx-auto flex max-w-screen-2xl flex-col justify-center gap-8 px-4 py-1 md:flex-row md:gap-20 md:px-8 lg:px-28"
+      >
+        <div class="mr-8">
+          <img
+            class="w-[11rem] text-xl"
+            src="Assets/logo-footer.svg"
+            alt="logotipo-footer"
+          />
+          <p class="mb-4 gap-8 px-3 py-1 text-xl font-bold"></p>
+
+          <h3 class="mb-4 text-[0.9rem] font-light text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <span class="block"
+              >Recusandae, cum quasi numquam ullam hic maiores.</span
+            >
+            <span class="block"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing.</span
+            >
+            <!-- Redes Sociais -->
+            <div class="mt-4 text-black transition-colors hover:text-white">
+              <a
+                href="#"
+                class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-600"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-pink-600"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-400"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </h3>
+        </div>
+        <!-- Container Flex (Informações e Categorias) -->
+        <div class="flex flex-row flex-wrap">
+          <!-- Colunas Informações, Categoria e Contato -->
+          <div class="w-1/2 space-y-4">
+            <h2 class="mb-4 flex flex-wrap text-lg font-semibold">
+              Informações
+            </h2>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Sobre Drip Store</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Segurança</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Wishlist</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Trabalhe Conosco</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Meus Pedidos</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Coluna Categorias -->
+          <div class="w-1/2">
+            <h2 class="mb-4 px-6 text-lg font-semibold">Categorias</h2>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Camisetas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Calças</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Bonés</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Headphones</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Tênis</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Coluna Contato -->
+        <div>
+          <h2 class="mb-4 text-lg font-semibold">Contato</h2>
+          <address class="not-italic text-gray-400">
+            <p class="mb-4">
+              Av. Humberto Monte, 2929 - 11° andar, Torre Norte - Salas 1101 à
+              1107
+            </p>
+            <p class="mb-4">Pici, Fortaleza - CE, 60440-593</p>
+            <p>(85) 99972-1749</p>
+          </address>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div
+        class="mt-5 border-t border-gray-800 px-4 pt-4 pb-4 text-center font-light text-gray-400"
+      >
+        <p class="text-sm sm:text-base">
+          © 2025 Digital College -<br class="sm:hidden" />
+          Devs. Fernando, Natan, Nilton e Lucas
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
