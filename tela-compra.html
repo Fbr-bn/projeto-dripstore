@@ -13,12 +13,12 @@
   <body>
     <header class="drop-shadow-md blur-none bg-[#FFFFFF] p-4 md:p-6">
       <div class="container mx-auto">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-center">
           <div>
             <img
               src="Assets/logo-header.svg"
               alt="DripStore Logo"
-              class="h-10 md:h-10 w-auto"
+              class="h-1 md:h-10 w-auto"
             />
           </div>
 
@@ -113,64 +113,51 @@
           Masculino
         </div>
 
-        <!-- Container da imagem do produto -->
-        <div class="flex flex-col lg:flex-row gap-10">
-          <!-- Imagem do produto -->
-          <div class="pt-8 px-12">
-            <div
-              class="bg-[#E2E3FF] p-4 rounded-lg max-w-md px-12 w-fit bg-red-200"
-            >
+        <!-- Container principal -->
+        <div class="flex flex-col lg:flex-row gap-8 px-6 lg:px-20 py-4">
+          <!-- Coluna da imagem e miniaturas -->
+          <div class="flex flex-col items-center pt-2 px-12 bg-red-400 h-fit">
+            <!-- Imagem principal -->
+            <div class="bg-[#E2E3FF] p-4 rounded-lg max-w-md w-fit">
               <img
                 src="Assets/White-Sneakers-PNG-Clipart.png"
                 alt="Tênis Nike Revolution 6"
-                class="h-auto w-full object-contain p-10"
+                class="h-auto w-full object-contain p-8"
               />
             </div>
-          </div>
 
-          <!-- Início box tênis -->
-          <div>
-            <div class="flex flex-row space-x-2">
-              <ul
+            <!-- Miniaturas abaixo da imagem -->
+            <div class="flex gap-2 mt-4 flex-nowrap justify-center">
+              <div
                 class="box-border size-24 border-2 p-4 bg-[#E2E3FF] rounded-lg"
               >
-                <li>
-                  <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
-                </li>
-              </ul>
-              <ul
+                <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
+              </div>
+              <div
                 class="box-border size-24 border-2 p-4 bg-[#FFE8BC] rounded-lg"
               >
-                <li>
-                  <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
-                </li>
-              </ul>
-              <ul
+                <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
+              </div>
+              <div
                 class="box-border size-24 border-2 p-4 bg-[#FFC0BC] rounded-lg"
               >
-                <li>
-                  <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
-                </li>
-              </ul>
-              <ul
+                <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
+              </div>
+              <div
                 class="box-border size-24 border-2 p-4 bg-[#DEC699] rounded-lg"
               >
-                <li>
-                  <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
-                </li>
-              </ul>
-              <ul
+                <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
+              </div>
+              <div
                 class="box-border size-24 border-2 p-4 bg-[#E8DFCF] rounded-lg"
               >
-                <li>
-                  <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
-                </li>
-              </ul>
+                <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
+              </div>
             </div>
           </div>
 
           <!-- Detalhes do produto -->
-          <div class="md:w-1/2">
+          <div class="flex-1">
             <!-- Título do produto -->
             <h1 class="text-2xl font-bold mb-2">
               Tênis Nike Revolution 6 Next Nature Masculino
@@ -275,7 +262,7 @@
             </button>
 
             <!-- Coleções em destaque - Corrigido -->
-            <div class="mt-14">
+            <div class="mt-12">
               <div class="flex items-center justify-between mb-6">
                 <h2 class="text-xl font-semibold text-[#474747]">
                   Coleções em destaque
