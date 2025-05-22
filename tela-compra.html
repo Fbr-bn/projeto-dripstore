@@ -105,9 +105,9 @@
     <!-- FIM DO HEADER -->
 
     <!-- Fundo da página do tênis -->
-    <div class="pt-20 md:pt-10 bg-light-gray-1 pb-15">
-      <div class="container mx-auto px-4">
-        <div class="text-xs text-gray-500 mb-4">
+    <div class="pt-15 md:pt-15 bg-light-gray-1 pb-15 bg-gray-50">
+      <div class="container mx-auto">
+        <div class="text-xs text-gray-500 mb-4 pt-3 px-2">
           Home / Produtos / Tênis / Nike / Tênis Nike Revolution 6 Next Nature
           Masculino
         </div>
@@ -115,7 +115,9 @@
         <!-- Container principal -->
         <div class="flex flex-col lg:flex-row gap-8 px-6 lg:px-20 py-4">
           <!-- Coluna da imagem e miniaturas -->
-          <div class="flex flex-col items-center pt-2 px-12 bg-red-400 h-fit">
+          <div
+            class="flex flex-col items-center p-8 pt-2 px-10 h-fit drop-shadow-md"
+          >
             <!-- Imagem principal -->
             <div class="bg-[#E2E3FF] p-4 rounded-lg max-w-md w-fit">
               <img
@@ -126,37 +128,59 @@
             </div>
 
             <!-- Miniaturas abaixo da imagem -->
-            <div class="flex gap-2 mt-4 flex-nowrap justify-center">
+            <div
+              class="flex gap-2 mt-4 flex-nowrap justify-center drop-shadow-md"
+            >
               <div
                 class="box-border size-24 border-2 p-4 bg-[#E2E3FF] rounded-lg"
               >
-                <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
+                <img
+                  class="cursor-pointer"
+                  src="Assets/White-Sneakers-PNG-Clipart.png"
+                  alt="#"
+                />
               </div>
               <div
                 class="box-border size-24 border-2 p-4 bg-[#FFE8BC] rounded-lg"
               >
-                <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
+                <img
+                  class="cursor-pointer"
+                  src="Assets/White-Sneakers-PNG-Clipart.png"
+                  alt="#"
+                />
               </div>
               <div
                 class="box-border size-24 border-2 p-4 bg-[#FFC0BC] rounded-lg"
               >
-                <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
+                <img
+                  class="cursor-pointer"
+                  src="Assets/White-Sneakers-PNG-Clipart.png"
+                  alt="#"
+                />
               </div>
               <div
                 class="box-border size-24 border-2 p-4 bg-[#DEC699] rounded-lg"
               >
-                <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
+                <img
+                  class="cursor-pointer"
+                  src="Assets/White-Sneakers-PNG-Clipart.png"
+                  alt="#"
+                />
               </div>
               <div
                 class="box-border size-24 border-2 p-4 bg-[#E8DFCF] rounded-lg"
               >
-                <img src="Assets/White-Sneakers-PNG-Clipart.png" alt="#" />
+                <img
+                  class="cursor-pointer"
+                  src="Assets/White-Sneakers-PNG-Clipart.png"
+                  alt="#"
+                />
               </div>
             </div>
           </div>
 
           <!-- Detalhes do produto -->
-          <div class="flex-1 bg-green-500 h-auto">
+          <div class="flex-1 h-auto py-5 px-5">
             <!-- Título do produto -->
             <h1 class="text-2xl font-bold mb-2">
               Tênis Nike Revolution 6 Next Nature Masculino
@@ -237,19 +261,19 @@
               <h3 class="text-black font-medium mb-2">Cores</h3>
               <div class="font-medium mb-2 space-x-1">
                 <button
-                  class="box-border size-25 border-4 p-4 rounded-full bg-[#6FEEFF] hover:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-400 cursor-pointer"
+                  class="w-10 h-10 border-4 rounded-full bg-[#6FEEFF] hover:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-400 cursor-pointer"
                 ></button>
 
                 <button
-                  class="box-border size-25 border-4 p-4 rounded-full bg-[#FF6969] hover:border-pink-700 focus:outline-none focus:ring-1 focus:ring-pink-700 cursor-pointer"
+                  class="w-10 h-10 border-4 rounded-full bg-[#FF6969] hover:border-pink-700 focus:outline-none focus:ring-1 focus:ring-pink-700 cursor-pointer"
                 ></button>
 
                 <button
-                  class="box-border size-25 border-4 p-4 rounded-full bg-[#5E5E5E] hover:border-[#333333] focus:outline-none focus:ring-1 focus:ring-gray-400 cursor-pointer"
+                  class="w-10 h-10 border-4 rounded-full bg-[#5E5E5E] hover:border-[#333333] focus:outline-none focus:ring-1 focus:ring-gray-400 cursor-pointer"
                 ></button>
 
                 <button
-                  class="box-border size-25 border-4 p-4 rounded-full bg-[#6D70B7] hover:border-[#9370db] focus:outline-none focus:ring-1 focus:ring-white cursor-pointer"
+                  class="w-10 h-10 border-4 rounded-full bg-[#6D70B7] hover:border-[#9370db] focus:outline-none focus:ring-1 focus:ring-white cursor-pointer"
                 ></button>
               </div>
             </div>
@@ -263,7 +287,7 @@
         </div>
 
         <!-- Produtos Relacionados -->
-        <div class="mt-12">
+        <div class="mt-6 px-6 pb-10 space-x-3">
           <div class="flex items-center justify-between mb-6">
             <h2 class="text-xl font-semibold text-[#474747]">
               Produtos Relacionados
@@ -359,21 +383,20 @@
             </div>
           </div>
         </div>
+
         <!-- Footer -->
-        <footer class="w-full bg-[#1F1F1F] py-10 text-white mt-14">
+        <footer class="w-full bg-[#1F1F1F] text-white py-10">
           <!-- Container Menu do Footer -->
           <div
-            class="mx-auto flex max-w-screen-2xl flex-col justify-center gap-8 px-4 py-1 md:flex-row md:gap-20 md:px-8 lg:px-28"
+            class="container mx-auto flex flex-col md:flex-row justify-between items-start gap-10 px-6 md:px-12 lg:px-28"
           >
-            <!-- Logotipo + descrição -->
-            <div class="mr-8">
+            <div class="flex-1">
               <img
-                class="w-[11rem] text-xl"
+                class="w-[11rem] mb-4"
                 src="Assets/logo-footer.svg"
                 alt="logotipo-footer"
               />
-              <p class="mb-4 gap-8 px-3 py-1 text-xl font-bold"></p>
-              <h3 class="mb-4 text-[0.9rem] font-light text-white">
+              <p class="text-sm text-gray-300">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 <span class="block"
                   >Recusandae, cum quasi numquam ullam hic maiores.</span
@@ -381,36 +404,34 @@
                 <span class="block"
                   >Lorem ipsum dolor sit, amet consectetur adipisicing.</span
                 >
-                <!-- Redes Sociais -->
-                <div class="mt-4 text-black transition-colors hover:text-white">
-                  <a
-                    href="#"
-                    class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-600"
-                  >
-                    <i class="fab fa-facebook"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-pink-600"
-                  >
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-400"
-                  >
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </div>
-              </h3>
+              </p>
+              <!-- Redes Sociais -->
+              <div class="mt-4">
+                <a
+                  href="#"
+                  class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-600"
+                >
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a
+                  href="#"
+                  class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-pink-600"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="#"
+                  class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-400"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </div>
             </div>
-
-            <!-- Informações e Categorias -->
+            <!-- Container Flex (Informações e Categorias) -->
             <div class="flex flex-row flex-wrap">
+              <!-- Colunas Informações, Categoria e Contato -->
               <div class="w-1/2 space-y-4">
-                <h2 class="mb-4 flex flex-wrap text-lg font-semibold">
-                  Informações
-                </h2>
+                <h2 class="mb-4 text-lg font-semibold">Informações</h2>
                 <ul class="space-y-2">
                   <li>
                     <a
@@ -456,7 +477,7 @@
                   </li>
                 </ul>
               </div>
-
+              <!-- Coluna Categorias -->
               <div class="w-1/2">
                 <h2 class="mb-4 px-6 text-lg font-semibold">Categorias</h2>
                 <ul class="space-y-2">
@@ -499,7 +520,7 @@
               </div>
             </div>
 
-            <!-- Contato -->
+            <!-- Coluna Contato -->
             <div>
               <h2 class="mb-4 text-lg font-semibold">Contato</h2>
               <address class="not-italic text-gray-400">
@@ -512,8 +533,7 @@
               </address>
             </div>
           </div>
-
-          <!-- Direitos autorais -->
+          <!-- Copyright -->
           <div
             class="mt-5 border-t border-gray-800 px-4 pt-4 pb-4 text-center font-light text-gray-400"
           >
