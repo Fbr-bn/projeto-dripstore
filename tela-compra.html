@@ -11,10 +11,10 @@
     />
   </head>
   <body>
-    <header class="drop-shadow-md bg-[#FFFFFF] p-6">
+    <header class="drop-shadow-md bg-[#FFFFFF] p-6 md:p-6">
       <div class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 relative">
-        <!-- Wrapper para menu hambúrguer (esquerda), logo (centro mobile), e ícones (direita mobile) -->
-        <div class="flex items-center justify-between w-full md:w-auto mb-4 md:mb-0 relative">
+        <!-- Logotipo (desktop) -->
+        <div class="flex items-center justify-between w-full md:w-auto mb-0 md:mb-0 relative">
           <!-- Menu hambúrguer (mobile) -->
           <div class="md:hidden z-10">
             <button id="menu-button" class="mr-4 cursor-pointer">
@@ -25,7 +25,7 @@
           </div>
     
           <!-- Logotipo centralizado no mobile -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0 z-0">
+          <div class="absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0 z-2">
             <img
               src="Assets/logo-header.svg"
               alt="DripStore Logo"
@@ -366,157 +366,167 @@
           </div>
         </div>
 
-        <footer class="w-full bg-[#1F1F1F] text-white py-10">
-          <div
-            class="container mx-auto flex flex-col md:flex-row justify-between items-start gap-10 px-6 md:px-12 lg:px-28"
-          >
-            <div class="flex-1">
-              <img
-                class="w-[11rem] mb-4"
-                src="Assets/logo-footer.svg"
-                alt="logotipo-footer"
-              />
-              <p class="text-sm text-gray-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                <span class="block"
-                  >Recusandae, cum quasi numquam ullam hic maiores.</span
-                >
-                <span class="block"
-                  >Lorem ipsum dolor sit, amet consectetur adipisicing.</span
-                >
-              </p>
-              <div class="mt-4">
-                <a
-                  href="#"
-                  class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-600"
-                >
-                  <i class="fab fa-facebook"></i>
-                </a>
-                <a
-                  href="#"
-                  class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-pink-600"
-                >
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a
-                  href="#"
-                  class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-400"
-                >
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </div>
-            </div>
-            <div class="flex flex-row flex-wrap">
-              <div class="w-1/2 space-y-4">
-                <h2 class="mb-4 text-lg font-semibold">Informações</h2>
-                <ul class="space-y-2">
-                  <li>
-                    <a
-                      href="#"
-                      class="font-light text-gray-400 transition hover:text-white"
-                      >Sobre Drip Store</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="font-light text-gray-400 transition hover:text-white"
-                      >Segurança</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="font-light text-gray-400 transition hover:text-white"
-                      >Wishlist</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="font-light text-gray-400 transition hover:text-white"
-                      >Blog</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="font-light text-gray-400 transition hover:text-white"
-                      >Trabalhe Conosco</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="font-light text-gray-400 transition hover:text-white"
-                      >Meus Pedidos</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="w-1/2">
-                <h2 class="mb-4 px-6 text-lg font-semibold">Categorias</h2>
-                <ul class="space-y-2">
-                  <li>
-                    <a
-                      href="#"
-                      class="px-6 font-light text-gray-400 transition hover:text-white"
-                      >Camisetas</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="px-6 font-light text-gray-400 transition hover:text-white"
-                      >Calças</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="px-6 font-light text-gray-400 transition hover:text-white"
-                      >Bonés</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="px-6 font-light text-gray-400 transition hover:text-white"
-                      >Headphones</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="px-6 font-light text-gray-400 transition hover:text-white"
-                      >Tênis</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
+        <!-- Footer -->
+    <div class="mx-auto mt-14 w-full bg-[#1F1F1F] py-10 text-white">
+      <!-- Container Menu do Footer -->
+      <div
+        class="mx-auto flex max-w-screen-2xl flex-col justify-center gap-8 px-4 py-1 md:flex-row md:gap-20 md:px-8 lg:px-28"
+      >
+        <div class="mr-8">
+          <img
+            class="w-[11rem] text-xl"
+            src="Assets/logo-footer.svg"
+            alt="logotipo-footer"
+          />
+          <p class="mb-4 gap-8 px-3 py-1 text-xl font-bold"></p>
 
-            <div>
-              <h2 class="mb-4 text-lg font-semibold">Contato</h2>
-              <address class="not-italic text-gray-400">
-                <p class="mb-4">
-                  Av. Humberto Monte, 2929 - 11° andar, Torre Norte - Salas 1101
-                  à 1107
-                </p>
-                <p class="mb-4">Pici, Fortaleza - CE, 60440-593</p>
-                <p>(85) 99972-1749</p>
-              </address>
+          <h3 class="mb-4 text-[0.9rem] font-light text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <span class="block"
+              >Recusandae, cum quasi numquam ullam hic maiores.</span
+            >
+            <span class="block"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing.</span
+            >
+            <!-- Redes Sociais -->
+            <div class="mt-4 text-black transition-colors hover:text-white">
+              <a
+                href="#"
+                class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-600"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-pink-600"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-400"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
             </div>
+          </h3>
+        </div>
+        <!-- Container Flex (Informações e Categorias) -->
+        <div class="flex flex-row flex-wrap">
+          <!-- Colunas Informações, Categoria e Contato -->
+          <div class="w-1/2 space-y-4">
+            <h2 class="mb-4 flex flex-wrap text-lg font-semibold">
+              Informações
+            </h2>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Sobre Drip Store</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Segurança</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Wishlist</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Trabalhe Conosco</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light text-gray-400 transition hover:text-white"
+                  >Meus Pedidos</a
+                >
+              </li>
+            </ul>
           </div>
-          <div
-            class="mt-5 border-t border-gray-800 px-4 pt-4 pb-4 text-center font-light text-gray-400"
-          >
-            <p class="text-sm sm:text-base">
-              © 2025 Digital College -<br class="sm:hidden" />
-              Devs. Fernando, Natan, Nilton e Lucas
+          <!-- Coluna Categorias -->
+          <div class="w-1/2">
+            <h2 class="mb-4 px-6 text-lg font-semibold">Categorias</h2>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Camisetas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Calças</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Bonés</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Headphones</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-6 font-light text-gray-400 transition hover:text-white"
+                  >Tênis</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Coluna Contato -->
+        <div>
+          <h2 class="mb-4 text-lg font-semibold">Contato</h2>
+          <address class="not-italic text-gray-400">
+            <p class="mb-4">
+              Av. Humberto Monte, 2929 - 11° andar, Torre Norte - Salas 1101 à
+              1107
             </p>
-          </div>
-        </footer>
+            <p class="mb-4">Pici, Fortaleza - CE, 60440-593</p>
+            <p>(85) 99972-1749</p>
+          </address>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div
+        class="mt-5 border-t border-gray-800 px-4 pt-4 pb-4 text-center font-light text-gray-400"
+      >
+        <p class="text-sm sm:text-base">
+          © 2025 Digital College -<br class="sm:hidden" />
+          Devs. Fernando, Natan, Nilton e Lucas
+        </p>
       </div>
     </div>
   </body>
