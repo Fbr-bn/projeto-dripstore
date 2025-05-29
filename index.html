@@ -1,749 +1,324 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DripStore</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <link
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil do Usuário</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-  </head>
-  <body>
-    <header class="drop-shadow-md bg-[#FFFFFF] p-6 md:p-6">
-      <div class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 relative">
-        
-        <!-- Seção esquerda: Menu hamburguer + logo centralizada no mobile -->
-        <div class="flex items-center justify-between w-full md:w-auto relative">
-          
-          <!-- Menu hambúrguer (somente mobile) -->
-          <div class="md:hidden z-10">
-            <button id="menu-button" class="mr-4 cursor-pointer">
-              <span class="block w-6 h-1 bg-black mb-1"></span>
-              <span class="block w-6 h-1 bg-black mb-1"></span>
-              <span class="block w-6 h-1 bg-black"></span>
-            </button>
-          </div>
-    
-          <!-- Logotipo (centralizado no mobile, alinhado à esquerda no desktop) -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0 z-2">
-            <img src="Assets/logo-header.svg" alt="DripStore Logo" class="h-auto w-auto" />
-          </div>
-    
-          <!-- Ícones (somente mobile) -->
-          <div class="flex items-center space-x-4 md:hidden z-10 ml-auto">
-            <button class="text-xl">
-              <i class="fas fa-magnifying-glass text-gray-700 hover:text-[#C92071]"></i>
-            </button>
-            <i class="fas fa-cart-shopping text-[#C92071] cursor-pointer text-xl"></i>
-          </div>
-        </div>
-    
-        <!-- Barra de pesquisa (somente desktop) -->
-        <div class="hidden md:flex items-center bg-gray-50 rounded h-[50px] w-[600px] px-4 mx-8">
-          <input class="w-full bg-transparent px-4 text-sm focus:outline-none" type="text" placeholder="Pesquisar produto..." />
-          <i class="fas fa-magnifying-glass text-gray-400 hover:text-[#C92071] cursor-pointer"></i>
-        </div>
-    
-        <!-- Ações (somente desktop) -->
-        <div class="hidden md:flex items-center space-x-5">
-          <a href="#" class="text-[#474747] hover:text-[#474747] whitespace-nowrap hover:underline">Cadastre-se</a>
-          <button class="bg-[#C92071] text-white px-6 py-2 md:rounded-lg cursor-pointer">Entrar</button>
-    
-          <!-- Carrinho (somente desktop) -->
-          <i class="fas fa-cart-shopping text-[#C92071] cursor-pointer text-xl"></i>
-        </div>
-      </div>
-    
-      <!-- Menu de navegação -->
-      <div class="container mx-auto flex items-center mt-4 md:mt-6 justify-between md:justify-start">
-        <nav id="menu" class="hidden md:block">
-          <ul class="flex space-x-8">
-            <li><a href="#" class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]">Home</a></li>
-            <li><a href="#" class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]">Produtos</a></li>
-            <li><a href="#" class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]">Categorias</a></li>
-            <li><a href="#" class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]">Meus Pedidos</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    
-    <section class="container mx-auto">
-      <div
-        class="flex flex-col-reverse justify-center items-center bg-gray-100 gap-4 md:flex md:flex-row md:w-full md:h-auto"
-      >
-        <div class="flex flex-col justify-center items-center gap-3 p-6">
-          <p class="text-[#C92071]">Melhores ofertas personalizadas</p>
-          <h2 class="font-semibold text-4xl">
-            Queima de <br />
-            Estoque Nike
-          </h2>
-          <p class="flex text-center p-2">
-            Consequat culpa exercitation mollit nisi <br />
-            excepteur do do tempor laboris eiusmod irure <br />
-            consectetur
-          </p>
-
-          <div>
-            <button
-              class="mb-15 text-white bg-[#C92071] bordeR-[#C92071] cursor-pointer w-[330px] h-[48px] uppercase rounded-[8px] md:w-[220px]"
-            >
-              Ver ofertas
-            </button>
-          </div>
-        </div>
-        <div class="flex justify-between items-center">
-          <img
-            src="Assets/tenis-carrossel.png"
-            alt="Tênis Nike"
-            class="w-80 rotate-340 md:w-[500px]"
-          />
-          <div>
-            <img
-              src="Assets/Ornament 11.png"
-              alt=""
-              class="absolute top-30 md:right-5 md:top-55 w-30 z-0"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container mx-auto px-4 py-6 sm:px-8 sm:py-10">
-      <h2 class="text-base font-bold px-26 mb-6 text-[#474747]">
-        Coleções em Destaque
-      </h2>
-      <div
-        class="flex flex-col gap-4 sm:flex-row sm:flex-wrap lg:flex-row lg:flex-nowrap gap-4 justify-center"
-      >
-        <div class="relative w-full sm:w-[20rem] md:w-[25.3125rem]">
-          <img
-            src="./public/Design sem nome.png"
-            alt="Background 1"
-            class="w-full h-[15.6875rem] object-contain absolute top-0 left-0 z-1"
-          />
-          <div
-            class="relative z-2 h-[15.6875rem] flex flex-row justify-between p-5"
-          >
-            <div class="flex flex-col ml-4 justify-center">
-              <span
-                class="text-base font-bold bg-[#E7FF86] text-[#474747] w-28 h-10 rounded-full px-3.5 py-1.5 inline-flex items-center justify-center gap-2.5 mt-2"
-                >30% OFF</span
-              >
-              <h3
-                class="mt-3 leading-9 text-4xl font-bold text-[#1f1f1f] tracking-tight font-sans"
-              >
-                Novo drop<br />Supreme
-              </h3>
-              <button
-                class="mt-4 bg-[#F5F5F5] text-[#C92071] w-[9.5625rem] h-[3rem] rounded-lg hover:bg-[#e5e5e5] font-sans font-bold text-base leading-6 tracking-wider text-center cursor-pointer"
-              >
-                Comprar
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="relative w-full sm:w-[20rem] md:w-[25.3125rem]">
-          <img
-            src="./public/Design sem nome (1).png"
-            alt="Background 2"
-            class="w-full h-[15.6875rem] object-contain absolute top-0 left-0 z-1"
-          />
-          <div
-            class="relative z-2 h-[15.6875rem] flex flex-row justify-between p-5"
-          >
-            <div class="flex flex-col ml-4 justify-center">
-              <span
-                class="text-base font-bold bg-[#E7FF86] text-[#474747] w-28 h-10 rounded-full px-3.5 py-1.5 inline-flex items-center justify-center gap-2.5 mt-2"
-                >30% OFF</span
-              >
-              <h3
-                class="mt-3 leading-9 text-4xl font-bold text-[#1f1f1f] tracking-tight font-sans"
-              >
-                Coleção<br />Adidas
-              </h3>
-              <button
-                class="mt-4 bg-[#F5F5F5] text-[#C92071] w-[9.5625rem] h-[3rem] rounded-lg hover:bg-[#e5e5e5] font-sans font-bold text-base leading-6 tracking-wider text-center cursor-pointer"
-              >
-                Comprar
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="relative w-full sm:w-[20rem] md:w-[25.3125rem]">
-          <img
-            src="./public/Design sem nome (2).png"
-            alt="Background 3"
-            class="w-full h-[15.6875rem] object-contain absolute top-0 left-0 z-1"
-          />
-          <div
-            class="relative z-2 h-[15.6875rem] flex flex-row justify-between p-5"
-          >
-            <div class="flex flex-col ml-4 justify-center">
-              <span
-                class="text-base font-bold bg-[#E7FF86] text-[#474747] w-28 h-10 rounded-full px-3.5 py-1.5 inline-flex items-center justify-center gap-2.5 mt-2"
-                >30% OFF</span
-              >
-              <h3
-                class="mt-3 leading-9 text-4xl font-bold text-[#1f1f1f] tracking-tight font-sans"
-              >
-                Novo<br />Beats Bass
-              </h3>
-              <button
-                class="mt-4 bg-[#F5F5F5] text-[#C92071] w-[9.5625rem] h-[3rem] rounded-lg hover:bg-[#e5e5e5] font-sans font-bold text-base leading-6 tracking-wider text-center cursor-pointer"
-              >
-                Comprar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <section class="text-center p-6 mt-10">
-        <h2 class="text-xl font-bold mb-6 text-[#474747] font-sans">
-          Coleções em Destaque
-        </h2>
-        <div class="flex flex-col gap-4 sm:flex-row sm:gap-8 justify-center">
-          <div class="flex flex-col items-center">
-            <div class="relative w-20 h-20 sm:w-24 sm:h-24 group">
-              <button
-                class="w-full h-full bg-white drop-shadow-md rounded-full flex items-center justify-center overflow-hidden cursor-pointer"
-              >
-                <img
-                  src="./public/Vector (3).svg"
-                  alt="Camiseta 1"
-                  class="absolute w-12 h-12 sm:w-14 sm:h-14 object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out group-hover:opacity-0"
-                />
-                <img
-                  src="./public/Vector (5).svg"
-                  alt="Camiseta 2"
-                  class="absolute w-12 h-12 sm:w-14 sm:h-14 object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
-                />
-              </button>
-            </div>
-            <p
-              class="mt-2 text-sm sm:text-base font-bold text-[#474747] font-sans"
-            >
-              Camisetas
-            </p>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="relative w-20 h-20 sm:w-24 sm:h-24 group">
-              <button
-                class="w-full h-full bg-white drop-shadow-md rounded-full flex items-center justify-center overflow-hidden cursor-pointer"
-              >
-                <img
-                  src="./public/Vector.svg"
-                  alt="Calça 1"
-                  class="absolute w-12 h-12 sm:w-14 sm:h-14 object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out group-hover:opacity-0"
-                />
-                <img
-                  src="./public/Vector (6) - Copia.svg"
-                  alt="Calça 2"
-                  class="absolute w-12 h-12 sm:w-14 sm:h-14 object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
-                />
-              </button>
-            </div>
-            <p
-              class="mt-2 text-sm sm:text-base font-bold text-[#474747] font-sans"
-            >
-              Calças
-            </p>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="relative w-20 h-20 sm:w-24 sm:h-24 group">
-              <button
-                class="w-full h-full bg-white drop-shadow-md rounded-full flex items-center justify-center overflow-hidden cursor-pointer"
-              >
-                <img
-                  src="./public/Vector.svg"
-                  alt="Jaqueta 1"
-                  class="absolute w-12 h-12 sm:w-14 sm:h-14 object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out group-hover:opacity-0"
-                />
-                <img
-                  src="./public/Vector (6) - Copia.svg"
-                  alt="Jaqueta 2"
-                  class="absolute w-12 h-12 sm:w-14 sm:h-14 object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
-                />
-              </button>
-            </div>
-            <p
-              class="mt-2 text-sm sm:text-base font-bold text-[#474747] font-sans"
-            >
-              Bonés
-            </p>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="relative w-20 h-20 sm:w-24 sm:h-24 group">
-              <button
-                class="w-full h-full bg-white drop-shadow-md rounded-full flex items-center justify-center overflow-hidden cursor-pointer"
-              >
-                <img
-                  src="./public/Vector (1).svg"
-                  alt="Acessório 1"
-                  class="absolute w-12 h-12 sm:w-14 sm:h-14 object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out group-hover:opacity-0"
-                />
-                <img
-                  src="./public/Vector (1) - Copia.svg"
-                  alt="Acessório 2"
-                  class="absolute w-12 h-12 sm:w-14 sm:h-14 object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
-                />
-              </button>
-            </div>
-            <p
-              class="mt-2 text-sm sm:text-base font-bold text-[#474747] font-sans"
-            >
-              Headphones
-            </p>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="relative w-20 h-20 sm:w-24 sm:h-24 group">
-              <button
-                class="w-full h-full bg-white drop-shadow-md rounded-full flex items-center justify-center overflow-hidden cursor-pointer"
-              >
-                <img
-                  src="./public/Vector (2).svg"
-                  alt="Tênis"
-                  class="absolute w-12 h-12 sm:w-14 sm:h-14 object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out group-hover:opacity-0"
-                />
-                <img
-                  src="./public/Vector (2) - Copia.svg"
-                  alt="Tênis"
-                  class="absolute w-12 h-12 sm:w-14 sm:h-14 object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
-                />
-              </button>
-            </div>
-            <p
-              class="mt-2 text-sm sm:text-base font-bold text-[#474747] font-sans"
-            >
-              Tênis
-            </p>
-          </div>
-        </div>
-      </section>
-    </section>
-
-    <div class="container mx-auto px-4 sm:px-8 py-6 bg-gray-50">
-      <div class="flex items-center justify-between mb-6">
-        <h2 class="text-xl font-semibold text-gray-800">Produtos em alta</h2>
-        <a href="#" class="text-lg sm:text-sm text-pink-500 hover:underline">
-          Ver todos →
-        </a>
-      </div>
-
-      <div
-        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4"
-      >
-        <div class="flex flex-col">
-          <div class="overflow-hidden">
-            <div
-              class="bg-white p-4 relative rounded hover:shadow-lg transition"
-            >
-              <span
-                class="top-2 left-2 bg-lime-200 text-green-700 text-xs font-semibold px-4 py-1 rounded-full"
-                >30% OFF</span
-              >
-              <img
-                src="assets/Layer 1aa 2.png"
-                alt="Tênis"
-                class="mx-auto cursor-pointer"
-              />
-            </div>
-            <div class="bg-gray-50 p-4">
-              <p class="text-gray-400 text-xs">Tênis</p>
-              <h3 class="font-medium mb-1">K-Swiss V8 - Masculino</h3>
-              <div class="text-sm mt-1">
-                <span class="line-through text-gray-400 mr-2">$200</span>
-                <span class="font-bold text-gray-900">$100</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-col">
-          <div class="overflow-hidden">
-            <div
-              class="bg-white p-4 relative rounded hover:shadow-lg transition"
-            >
-              <span
-                class="top-2 left-2 bg-lime-200 text-green-700 text-xs font-semibold px-4 py-1 rounded-full"
-                >30% OFF</span
-              >
-              <img
-                src="assets/Layer 1aa 2.png"
-                alt="Tênis"
-                class="mx-auto cursor-pointer"
-              />
-            </div>
-            <div class="bg-gray-50 p-4">
-              <p class="text-gray-400 text-xs">Tênis</p>
-              <h3 class="font-medium mb-1">K-Swiss V8 - Masculino</h3>
-              <div class="text-sm mt-1">
-                <span class="line-through text-gray-400 mr-2">$200</span>
-                <span class="font-bold text-gray-900">$100</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-col">
-          <div class="overflow-hidden">
-            <div
-              class="bg-white p-4 relative rounded hover:shadow-lg transition"
-            >
-              <span class="top-2 left-2 px-4 py-1 rounded-full">30% OFF</span>
-              <img
-                src="assets/Layer 1aa 2.png"
-                alt="Tênis"
-                class="mx-auto cursor-pointer"
-              />
-            </div>
-            <div class="bg-gray-50 p-4">
-              <p class="text-gray-400 text-xs">Tênis</p>
-              <h3 class="font-medium mb-1">K-Swiss V8 - Masculino</h3>
-              <div class="text-sm mt-1">
-                <span class="line-through text-gray-400 mr-2">$200</span>
-                <span class="font-bold text-gray-900">$100</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-col">
-          <div class="overflow-hidden">
-            <div
-              class="bg-white p-4 relative rounded hover:shadow-lg transition"
-            >
-              <span class="top-2 left-2 px-4 py-1 rounded-full"></span>
-              <img
-                src="assets/Layer 1aa 2.png"
-                alt="Tênis"
-                class="mx-auto cursor-pointer"
-              />
-            </div>
-            <div class="bg-gray-50 p-4">
-              <p class="text-gray-400 text-xs">Tênis</p>
-              <h3 class="font-medium mb-1">K-Swiss V8 - Masculino</h3>
-              <div class="text-sm mt-1">
-                <span class="line-through text-gray-400 mr-2">$200</span>
-                <span class="font-bold text-gray-900">$100</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-col">
-          <div class="overflow-hidden">
-            <div
-              class="bg-white p-4 relative rounded hover:shadow-lg transition"
-            >
-              <span class="top-2 left-2 px-4 py-1 rounded-full"></span>
-              <img
-                src="assets/Layer 1aa 2.png"
-                alt="Tênis"
-                class="mx-auto cursor-pointer"
-              />
-            </div>
-            <div class="bg-gray-50 p-4">
-              <p class="text-gray-400 text-xs">Tênis</p>
-              <h3 class="font-medium mb-1">K-Swiss V8 - Masculino</h3>
-              <div class="text-sm mt-1">
-                <span class="line-through text-gray-400 mr-2">$200</span>
-                <span class="font-bold text-gray-900">$100</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-col">
-          <div class="overflow-hidden">
-            <div
-              class="bg-white p-4 relative rounded hover:shadow-lg transition"
-            >
-              <span class="top-2 left-2 px-4 py-1 rounded-full"></span>
-              <img
-                src="assets/Layer 1aa 2.png"
-                alt="Tênis"
-                class="mx-auto cursor-pointer"
-              />
-            </div>
-            <div class="bg-gray-50 p-4">
-              <p class="text-gray-400 text-xs">Tênis</p>
-              <h3 class="font-medium mb-1">K-Swiss V8 - Masculino</h3>
-              <div class="text-sm mt-1">
-                <span class="line-through text-gray-400 mr-2">$200</span>
-                <span class="font-bold text-gray-900">$100</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-col">
-          <div class="overflow-hidden">
-            <div
-              class="bg-white p-4 relative rounded hover:shadow-lg transition"
-            >
-              <span class="top-2 left-2 px-4 py-1 rounded-full"></span>
-              <img
-                src="assets/Layer 1aa 2.png"
-                alt="Tênis"
-                class="mx-auto cursor-pointer"
-              />
-            </div>
-            <div class="bg-gray-50 p-4">
-              <p class="text-gray-400 text-xs">Tênis</p>
-              <h3 class="font-medium mb-1">K-Swiss V8 - Masculino</h3>
-              <div class="text-sm mt-1">
-                <span class="line-through text-gray-400 mr-2">$200</span>
-                <span class="font-bold text-gray-900">$100</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-col">
-          <div class="overflow-hidden">
-            <div
-              class="bg-white p-4 relative rounded hover:shadow-lg transition"
-            >
-              <span class="top-2 left-2 px-4 py-1 rounded-full"></span>
-              <img
-                src="assets/Layer 1aa 2.png"
-                alt="Tênis"
-                class="mx-auto cursor-pointer"
-              />
-            </div>
-            <div class="bg-gray-50 p-4">
-              <p class="text-gray-400 text-xs">Tênis</p>
-              <h3 class="font-medium mb-1">K-Swiss V8 - Masculino</h3>
-              <div class="text-sm mt-1">
-                <span class="line-through text-gray-400 mr-2">$200</span>
-                <span class="font-bold text-gray-900">$100</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section class="bg-gray-100">
-      <div class="max-w-screen-xl mx-auto px-4 py-12">
-        <div
-          class="flex flex-col md:flex-row md:items-center justify-center gap-8"
-        >
-          <div class="relative w-64 h-64 flex-shrink-0 mx-auto md:mx-0">
-            <div
-              class="absolute inset-0 rounded-full bg-gradient-to-b from-[#4200FF]/20 to-white/20"
-            >
-              <img
-                src="Assets/laye.png"
-                alt="Air Jordan"
-                class="w-full h-full object-contain transform -rotate-12"
-              />
-            </div>
-          </div>
-
-          <div class="md-w-md text-left flex-shrink-0 mx-auto md:mx-0">
-            <span class="text-[#C92071] font-semibold">Oferta especial</span>
-            <h2 class="text-4xl font-bold text-[#474747] mt-3">
-              Air Jordan edição <span class="block">de colecionador</span>
-            </h2>
-            <div
-              class="font-light text-gray-700 text-[#474747] mt-6 md:text-balance"
-            >
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              </p>
-              <p>
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim
-              </p>
-              <p>
-                ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                ut
-              </p>
-              <p>aliquip</p>
-            </div>
-            <button
-              class="bg-[#C92071] text-white mt-4 px-8 py-3 rounded-lg hover:bg-[#a81a5f] transition cursor-pointer"
-            >
-              Ver Oferta
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="mx-auto w-full bg-[#1F1F1F] py-10 text-white">
-      <div
-        class="mx-auto flex max-w-screen-2xl flex-col justify-center gap-8 px-4 py-1 md:flex-row md:gap-20 md:px-8 lg:px-28"
-      >
-        <div class="mr-8">
-          <img
-            class="w-[11rem] text-xl"
-            src="Assets/logo-footer.svg"
-            alt="logotipo-footer"
-          />
-          <p class="mb-4 gap-8 px-3 py-1 text-xl font-bold"></p>
-
-          <h3 class="mb-4 text-[0.9rem] font-light text-white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            <span class="block"
-              >Recusandae, cum quasi numquam ullam hic maiores.</span
-            >
-            <span class="block"
-              >Lorem ipsum dolor sit, amet consectetur adipisicing.</span
-            >
-
-            <div class="mt-4 text-black transition-colors hover:text-white">
-              <a
-                href="#"
-                class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-600"
-              >
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a
-                href="#"
-                class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-pink-600"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a
-                href="#"
-                class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-400"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-            </div>
-          </h3>
-        </div>
-
-        <div class="flex flex-row flex-wrap">
-          <div class="w-1/2 space-y-4">
-            <h2 class="mb-4 flex flex-wrap text-lg font-semibold">
-              Informações
-            </h2>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  class="font-light text-gray-400 transition hover:text-white"
-                  >Sobre Drip Store</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="font-light text-gray-400 transition hover:text-white"
-                  >Segurança</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="font-light text-gray-400 transition hover:text-white"
-                  >Wishlist</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="font-light text-gray-400 transition hover:text-white"
-                  >Blog</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="font-light text-gray-400 transition hover:text-white"
-                  >Trabalhe Conosco</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="font-light text-gray-400 transition hover:text-white"
-                  >Meus Pedidos</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="w-1/2">
-            <h2 class="mb-4 px-6 text-lg font-semibold">Categorias</h2>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  class="px-6 font-light text-gray-400 transition hover:text-white"
-                  >Camisetas</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="px-6 font-light text-gray-400 transition hover:text-white"
-                  >Calças</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="px-6 font-light text-gray-400 transition hover:text-white"
-                  >Bonés</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="px-6 font-light text-gray-400 transition hover:text-white"
-                  >Headphones</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="px-6 font-light text-gray-400 transition hover:text-white"
-                  >Tênis</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
+</head>
+<body class="bg-[#F9F8FE] font-sans text-gray-800">
+  <header class="drop-shadow-md blur-none bg-[#FFFFFF] p-4 md:p-6">
+    <div class="container mx-auto">
+      
+      <div class="flex items-center justify-between">
+       
         <div>
-          <h2 class="mb-4 text-lg font-semibold">Contato</h2>
-          <address class="not-italic text-gray-400">
-            <p class="mb-4">
-              Av. Humberto Monte, 2929 - 11° andar, Torre Norte - Salas 1101 à
-              1107
-            </p>
-            <p class="mb-4">Pici, Fortaleza - CE, 60440-593</p>
-            <p>(85) 99972-1749</p>
-          </address>
+          <img
+            src="Assets/logo-header.svg"
+            alt="DripStore Logo"
+            class="h-10 md:h-10 w-auto"
+          />
+        </div>
+
+        
+        <div
+          class="hidden md:flex items-center bg-gray-50 rounded h-[50px] w-[600px] px-4 mx-8"
+        >
+          <input
+            class="w-full bg-transparent px-4 text-sm focus:outline-none"
+            type="text"
+            placeholder="Pesquisar produto..."
+          />
+          <i
+            class="fas fa-magnifying-glass text-gray-400 hover:text-[#C92071] cursor-pointer"
+          ></i>
+        </div>
+
+        
+        <div class="hidden md:flex items-center space-x-5">
+          <a
+            href="#"
+            class="text-[#474747] hover:text-[#474747] whitespace-nowrap hover:underline"
+            >Cadastre-se</a
+          >
+          <button
+            class="bg-[#C92071] text-white px-6 py-2 md:rounded-lg cursor-pointer"
+          >
+            Entrar
+          </button>
+        </div>
+
+        
+        <i
+          class="fas fa-cart-shopping text-[#C92071] cursor-pointer text-xl"
+        ></i>
+
+        
+        <button class="md:hidden text-xl">
+          <i
+            class="fas fa-magnifying-glass text-gray-700 hover:text-[#C92071]"
+          ></i>
+        </button>
+      </div>
+    </div>
+
+    
+    <div class="flex items-center mt-4 md:mt-6">
+      
+      <button id="menu-button" class="md:hidden mr-4 cursor-pointer">
+        <span class="block w-6 h-1 bg-black mb-1"></span>
+        <span class="block w-6 h-1 bg-black mb-1"></span>
+        <span class="block w-6 h-1 bg-black"></span>
+      </button>
+
+      
+      <nav id="menu" class="hidden md:block">
+        <ul class="flex space-x-8">
+          <li>
+            <a
+              href="#"
+              class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
+              >Produtos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
+              >Categorias</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
+              >Meus Pedidos</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <div class="flex flex-col md:flex-row justify-center pb-36 pt-14 mb-20 ">
+    <!-- Sidebar -->
+    <div class="hidden md:block w-72 bg-white rounded-[0,25rem] p-6 mr-6 w-[334px] h-[250px]">
+      <h2 class="font-bold border-b border-gray-200 pb-4 mb-4">Meu Perfil</h2>
+      <ul class="space-y-4">
+        <li class="text-gray-700 font-medium hover:text-[#C92071] cursor-pointer border-b border-gray-200 pb-4 mb-4">Meus Pedidos</li>
+        <li class="text-[#C92071] font-bold cursor-pointer border-b border-gray-200 pb-4 mb-4">Minhas Informações</li>
+        <li class="text-gray-700 font-medium hover:text-[#C92071] cursor-pointer ">Métodos de Pagamento</li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="w-full max-w-4xl bg-white rounded-[0,25rem] p-6">
+      <div class="flex justify-between items-center mb-4 border-b border-gray-200 pb-4 mb-4">
+        <h2 class="font-bold text-lg">Minhas Informações</h2>
+        <a href="#" class="text-[#C92071] text-sm font-medium hover:underline">Editar</a>
+      </div>
+
+      <!-- Informações Pessoais -->
+      <div class="border-b border-gray-200 pb-4 mb-4">
+        <h3 class="font-bold mb-2">Informações Pessoais</h3>
+        <div class="space-y-1 text-sm">
+          <p><span class="font-medium text-gray-400">Nome:</span> <span class="font-semibold"> Francisco Antonio Pereira</span></p>
+          <p><span class="font-medium text-gray-400">CPF:</span> <span class="font-semibold"> 123485913-35</span></p>
+          <p><span class="font-medium text-gray-400">Email:</span> <span class="font-semibold"> francisco@gmail.com</span></p>
+          <p><span class="font-medium text-gray-400">Celular:</span> <span class="font-semibold"> (85) 5555-5555</span></p>
         </div>
       </div>
 
-      <div
-        class="mt-5 border-t border-gray-800 px-4 pt-4 pb-4 text-center font-light text-gray-400"
-      >
-        <p class="text-sm sm:text-base">
-          © 2025 Digital College -<br class="sm:hidden" />
-          Devs. Fernando, Natan, Nilton e Lucas
-        </p>
+      <!-- Informações de Entrega -->
+      <div>
+        <h3 class="font-bold mb-2">Informações de Entrega</h3>
+        <div class="space-y-1 text-sm">
+          <p><span class="font-medium text-gray-400">Endereço:</span> <span class="font-semibold"> Rua João Pessoa, 333</span></p>
+          <p><span class="font-medium text-gray-400">Bairro:</span> <span class="font-semibold"> Centro</span></p>
+          <p><span class="font-medium text-gray-400">Cidade:</span> <span class="font-semibold">Fortaleza, Ceará</span></p>
+          <p><span class="font-medium text-gray-400">CEP:</span> <span class="font-semibold"> 433-8800</span></p>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+
+  <div class="mx-auto w-full bg-[#1F1F1F] py-10 text-white">
+     
+    <div
+      class="mx-auto flex max-w-screen-2xl flex-col justify-center gap-8 px-4 py-1 md:flex-row md:gap-20 md:px-8 lg:px-28"
+    >
+      <div class="mr-8">
+        <img
+          class="w-[11rem] text-xl"
+          src="Assets/logo-footer.svg"
+          alt="logotipo-footer"
+        />
+        <p class="mb-4 gap-8 px-3 py-1 text-xl font-bold"></p>
+
+        <h3 class="mb-4 text-[0.9rem] font-light text-white">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <span class="block"
+            >Recusandae, cum quasi numquam ullam hic maiores.</span
+          >
+          <span class="block"
+            >Lorem ipsum dolor sit, amet consectetur adipisicing.</span
+          >
+         
+          <div class="mt-4 text-black transition-colors hover:text-white">
+            <a
+              href="#"
+              class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-600"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="#"
+              class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-pink-600"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="#"
+              class="px-1 text-2xl text-gray-600 transition-colors duration-200 hover:text-blue-400"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </h3>
+      </div>
+    
+
+      <div class="flex flex-row flex-wrap">
+    
+        <div class="w-1/2 space-y-4">
+          <h2 class="mb-4 flex flex-wrap text-lg font-semibold">
+            Informações
+          </h2>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#"
+                class="font-light text-gray-400 transition hover:text-white"
+                >Sobre Drip Store</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-light text-gray-400 transition hover:text-white"
+                >Segurança</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-light text-gray-400 transition hover:text-white"
+                >Wishlist</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-light text-gray-400 transition hover:text-white"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-light text-gray-400 transition hover:text-white"
+                >Trabalhe Conosco</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-light text-gray-400 transition hover:text-white"
+                >Meus Pedidos</a
+              >
+            </li>
+          </ul>
+        </div>
+   
+
+        <div class="w-1/2">
+          <h2 class="mb-4 px-6 text-lg font-semibold">Categorias</h2>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#"
+                class="px-6 font-light text-gray-400 transition hover:text-white"
+                >Camisetas</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="px-6 font-light text-gray-400 transition hover:text-white"
+                >Calças</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="px-6 font-light text-gray-400 transition hover:text-white"
+                >Bonés</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="px-6 font-light text-gray-400 transition hover:text-white"
+                >Headphones</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="px-6 font-light text-gray-400 transition hover:text-white"
+                >Tênis</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    
+      <div>
+        <h2 class="mb-4 text-lg font-semibold">Contato</h2>
+        <address class="not-italic text-gray-400">
+          <p class="mb-4">
+            Av. Humberto Monte, 2929 - 11° andar, Torre Norte - Salas 1101 à
+            1107
+          </p>
+          <p class="mb-4">Pici, Fortaleza - CE, 60440-593</p>
+          <p>(85) 99972-1749</p>
+        </address>
+      </div>
+    </div>
+    
+    <div
+      class="mt-5 border-t border-gray-800 px-4 pt-4 pb-4 text-center font-light text-gray-400"
+    >
+      <p class="text-sm sm:text-base">
+        © 2025 Digital College -<br class="sm:hidden" />
+        Devs. Fernando, Natan, Nilton e Lucas
+      </p>
+    </div>
+  </div>
+</body>
 </html>
